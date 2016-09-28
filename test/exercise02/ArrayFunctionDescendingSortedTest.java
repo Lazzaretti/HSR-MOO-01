@@ -25,7 +25,7 @@ public class ArrayFunctionDescendingSortedTest {
     }
 
     @Test
-    public void revertTest(){
+    public void descendingTest(){
         assertEquals(answer, ArrayFunction.descendinglySorted(inArray));
     }
 
