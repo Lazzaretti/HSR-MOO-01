@@ -1,7 +1,6 @@
-package exercise02.KnightsTour;
+package exercise02.KnightsTour.logic;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * Created by flazz on 01.10.2016.

@@ -1,6 +1,4 @@
-package exercise02.KnightsTour;
-
-import java.util.Objects;
+package exercise02.KnightsTour.logic;
 
 /**
  * Created by flazz on 01.10.2016.

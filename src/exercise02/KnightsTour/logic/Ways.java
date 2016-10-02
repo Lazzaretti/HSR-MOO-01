@@ -1,4 +1,4 @@
-package exercise02.KnightsTour;
+package exercise02.KnightsTour.logic;
 
 import java.util.ArrayList;
 

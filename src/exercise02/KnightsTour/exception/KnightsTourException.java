@@ -1,4 +1,4 @@
-package exercise02.KnightsTour;
+package exercise02.KnightsTour.exception;
 
 /**
  * Created by flazz on 01.10.2016.
