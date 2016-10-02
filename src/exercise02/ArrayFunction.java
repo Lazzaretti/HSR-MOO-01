@@ -25,7 +25,7 @@ public class ArrayFunction {
      * @param arr
      * @return array sorted
      */
-    public static int[] ascendinglySorted(int[] arr){
+    public static int[] sortAscending(int[] arr){
         Integer[] array = new Integer[arr.length];
         for(int i=0; i<arr.length;i++) {
              array[i] = arr[i];
@@ -52,19 +52,33 @@ public class ArrayFunction {
         return sort;
     }
 
+    public static boolean isSame(int[] arr, int[] other){
+        for (int i=0; i<arr.length;i++){
+            if(arr[i]!=other[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Ascending Array herstellen, anschliessend vergleichen
+     * @param arr
+     * @return
+     */
+    public static boolean ascendinglySorted(int[] arr){
+        int[] asc = sortAscending(arr);
+        return isSame(arr,asc);
+    }
+
     /**
      * Descending Array herstellen, anschliessend vergleichen
      * @param arr
      * @return
      */
     public static boolean descendinglySorted(int[] arr){
-        int[] desc = revert(ascendinglySorted(arr));
-        for (int i=0; i<arr.length;i++){
-            if(arr[i]!=desc[i]){
-                return false;
-            }
-        }
-        return true;
+        int[] desc = revert(sortAscending(arr));
+        return isSame(arr,desc);
     }
 
     public static void print(int[] arr){
