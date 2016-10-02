@@ -1,6 +1,5 @@
 package exercise02.KnightsTour.gui;
 
-import exercise02.KnightsTour.Settings;
 import exercise02.KnightsTour.logic.Coordinate;
 
 import java.awt.*;

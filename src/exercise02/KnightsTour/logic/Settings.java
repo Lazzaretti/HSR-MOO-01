@@ -1,4 +1,4 @@
-package exercise02.KnightsTour;
+package exercise02.KnightsTour.logic;
 
 import exercise02.KnightsTour.logic.Coordinate;
 import exercise02.KnightsTour.logic.Ways;

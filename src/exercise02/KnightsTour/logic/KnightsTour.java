@@ -1,9 +1,5 @@
 package exercise02.KnightsTour.logic;
 
-import exercise02.KnightsTour.logic.Coordinate;
-import exercise02.KnightsTour.logic.Way;
-import exercise02.KnightsTour.logic.Ways;
-
 /**
  * Created by flazz on 01.10.2016.
  * Springerproblem
@@ -27,6 +23,10 @@ public abstract class KnightsTour {
         this.width = mapWidth;
         this.height = mapHeight;
         map = new boolean[mapWidth][mapHeight];
+    }
+
+    public KnightsTour(Settings settings){
+        this(settings.start.x,settings.start.y, settings.width,settings.height);
     }
 
     public Ways find(){

@@ -19,6 +19,10 @@ public class KnightsTourFindAllWays extends KnightsTour {
         super(startX,startY,mapWidth,mapHeight);
     }
 
+    public KnightsTourFindAllWays(Settings settings){
+        super(settings);
+    }
+
     protected Ways findWay(Coordinate position, Way way){
         Ways wayArr[] = new Ways[8];
         wayArr[0] = find(position.adabtedCoord(1,2),way.clone());

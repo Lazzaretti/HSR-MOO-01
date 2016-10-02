@@ -1,8 +1,6 @@
 package exercise02.KnightsTour.gui;
 
-import exercise02.KnightsTour.Settings;
-import exercise02.KnightsTour.logic.Coordinate;
-import exercise02.KnightsTour.logic.Ways;
+import exercise02.KnightsTour.logic.Settings;
 
 /**
  * Created by flazz on 02.10.2016.

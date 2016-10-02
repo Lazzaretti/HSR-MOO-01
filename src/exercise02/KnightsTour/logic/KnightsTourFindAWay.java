@@ -19,6 +19,10 @@ public class KnightsTourFindAWay extends KnightsTour {
         super(startX,startY,mapWidth,mapHeight);
     }
 
+    public KnightsTourFindAWay(Settings settings){
+        super(settings);
+    }
+
     protected Ways findWay(Coordinate position, Way way){
         Ways actuWay;
         for(int x=-2;x<3;x++) {
