@@ -1,4 +1,4 @@
-package exercise02;
+package ch.lazzaretti.exercise02;
 
 
 import org.junit.After;

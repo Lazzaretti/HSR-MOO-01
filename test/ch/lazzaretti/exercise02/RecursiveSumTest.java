@@ -1,6 +1,5 @@
-package exercise02;
+package ch.lazzaretti.exercise02;
 
-import exercise01.Factorial;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
