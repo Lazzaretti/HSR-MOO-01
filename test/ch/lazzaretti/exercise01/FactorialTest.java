@@ -1,8 +1,6 @@
-package exercise01test;
+package ch.lazzaretti.exercise01;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
-import exercise01.Factorial;
 
 public class FactorialTest {
     @Test

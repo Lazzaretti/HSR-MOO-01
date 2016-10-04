@@ -1,12 +1,10 @@
-package exercise01test;
+package ch.lazzaretti.exercise01;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import exercise01.PrimeNumber;
 
 public class PrimeNumberTest {
 	

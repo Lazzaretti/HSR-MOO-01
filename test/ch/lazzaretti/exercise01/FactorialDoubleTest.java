@@ -1,10 +1,8 @@
-package exercise01test;
+package ch.lazzaretti.exercise01;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import exercise01.FactorialDouble;
 
 public class FactorialDoubleTest {
 
