@@ -41,4 +41,6 @@ public class Person {
 	public int getSalary() {
 		return salary;
 	}
+
+	public String getFullName(){return this.getFirstName() + " " + this.getLastName(); }
 }

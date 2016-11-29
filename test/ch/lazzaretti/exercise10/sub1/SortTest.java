@@ -1,5 +1,6 @@
-package ch.lazzaretti.exercise03.sub1;
+package ch.lazzaretti.exercise10.sub1;
 
+import ch.lazzaretti.exercise10.PeopleTests;
 import ch.lazzaretti.exercise10.sub1.PeopleData;
 import ch.lazzaretti.exercise10.sub1.Person;
 import ch.lazzaretti.exercise10.sub1.PersonUtil;
@@ -18,15 +19,14 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by fab on 23.11.2016.
  */
-public class SortTest {
+public class SortTest extends PeopleTests {
 
-    ArrayList<Person> people;
-    HashMap<SortStrategy,List<Person>> lists;
+    protected HashMap<SortStrategy,List<Person>> lists;
 
     @Before
+    @Override
     public void beforeTest() throws IOException {
-        //We need a ArrayList and internal it is one
-        people = (ArrayList)PeopleData.read("data/people.csv");
+        super.beforeTest();
         lists = new HashMap<>();
         for (SortStrategy strategy : SortStrategy.values()){
             lists.put(strategy,(List)people.clone());
