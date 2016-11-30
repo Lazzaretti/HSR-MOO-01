@@ -1,15 +1,10 @@
 package ch.lazzaretti.exercise10.sub1;
 
-import ch.lazzaretti.exercise10.PeopleTests;
-import ch.lazzaretti.exercise10.sub1.PeopleData;
-import ch.lazzaretti.exercise10.sub1.Person;
-import ch.lazzaretti.exercise10.sub1.PersonUtil;
-import ch.lazzaretti.exercise10.sub1.SortStrategy;
+import ch.lazzaretti.exercise10.PeopleTest;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by fab on 23.11.2016.
  */
-public class SortTest extends PeopleTests {
+public class SortTest extends PeopleTest {
 
     protected HashMap<SortStrategy,List<Person>> lists;
 

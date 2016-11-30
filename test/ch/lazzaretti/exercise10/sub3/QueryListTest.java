@@ -1,6 +1,6 @@
 package ch.lazzaretti.exercise10.sub3;
 
-import ch.lazzaretti.exercise10.PeopleTests;
+import ch.lazzaretti.exercise10.PeopleTest;
 import ch.lazzaretti.exercise10.sub1.Person;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by fab on 29.11.2016.
  */
-public class QueryListTest extends PeopleTests {
+public class QueryListTest extends PeopleTest {
 
     protected QueryList<Person> queryList;
 
