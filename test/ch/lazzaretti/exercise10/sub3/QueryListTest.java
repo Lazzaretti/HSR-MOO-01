@@ -40,7 +40,7 @@ public class QueryListTest extends PeopleTest {
     @Test
     public void maximumTest(){
         double queryMax = queryList.maximum(p ->p.getAge());
-        OptionalDouble streamMaxOp = people.stream().mapToDouble(p->p.getAge()).average();
+        OptionalDouble streamMaxOp = people.stream().mapToDouble(p->p.getAge()).max();
         double streamMax = streamMaxOp.getAsDouble();
         assertEquals(streamMax,queryMax,0.0001);
     }
@@ -53,7 +53,7 @@ public class QueryListTest extends PeopleTest {
 
     @Test
     public void maximumElemHardTest(){
-        assertEquals("Holly Hildebrandt",queryList.maximumElement(p->p.getFullName().length()));
+        assertEquals("Charlotte Zimmermann",queryList.maximumElement(p->p.getFullName().length()).getFullName());
     }
 
 }
