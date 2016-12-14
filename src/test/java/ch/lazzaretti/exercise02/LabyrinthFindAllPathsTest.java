@@ -43,7 +43,7 @@ public class LabyrinthFindAllPathsTest {
         Assert.assertEquals(expected, outContent.toString());
 }//*/
 
-    @Test
+    @Test(timeout = 2000)
     public void findPathTest(){
 
         new LabyrinthFindAllPaths().findPath(0, 0, "PATH: ");
