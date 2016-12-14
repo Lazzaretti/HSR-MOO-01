@@ -49,7 +49,7 @@ public class LabyrinthFindAllPathsTest {
         new LabyrinthFindAllPaths().findPath(0, 0, "PATH: ");
 
 
-        Pattern pattern = Pattern.compile("(PATH: -> (\\[\\d, \\d\\] -> ){1,100}\\[\\d, \\d\\] \\r\\n){8}");
+        Pattern pattern = Pattern.compile("(PATH: -> (\\[\\d, \\d\\] -> ){1,100}\\[\\d, \\d\\] (\\r)?\\n){8}");
         Matcher matcher = pattern.matcher(outContent.toString());
 
         Assert.assertTrue(matcher.matches());
