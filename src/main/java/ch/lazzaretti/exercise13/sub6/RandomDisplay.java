@@ -17,13 +17,13 @@ public class RandomDisplay {
 	private final int FREQUENCY = 50;
 	private final JLabel imageLabel;
 	private final Random random = new Random();
-	private LinkedList<BufferedImage> images = new LinkedList<>();
+	private BufferedImage image;
 	
 	private RandomDisplay() {
 		createRandomImage();
 		JFrame frame = new JFrame("Viewer");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		imageLabel = new JLabel(new ImageIcon(images.getLast()));
+		imageLabel = new JLabel(new ImageIcon(image));
 		frame.getContentPane().add(imageLabel, BorderLayout.CENTER);
 		SwingUtilities.invokeLater(() -> {
 			frame.pack();
@@ -36,7 +36,7 @@ public class RandomDisplay {
 	}
 	
 	private void updateImage() {
-		imageLabel.setIcon(new ImageIcon(images.getLast()));
+		imageLabel.setIcon(new ImageIcon(image));
 	}
 	
 	private void createRandomImage() {
@@ -47,7 +47,7 @@ public class RandomDisplay {
 				image.setRGB(x, y, getRandomPixel(pattern));
 			}
 		}
-		images.add(image);
+		this.image = image;
 	}
 	
 	private int getRandomPixel(int pattern) {
