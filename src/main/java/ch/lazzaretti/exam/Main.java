@@ -1,46 +1,93 @@
 package ch.lazzaretti.exam;
 
+import java.util.*;
+
 /**
- * Created by fab on 21.12.2016.
+ * Created by flazz on 20.01.2017.
  */
 public class Main {
-    public static void main(String args[]){
-        Base a = new Sub();
-        Sub b = new Sub();
+    public static void main(String[] args){
+        /*Set<Person> group = new HashSet<>();
 
-        a.copyTo(b);
+        Person me = new Person("Fabrizio");
+        Person other = new Person("Other");
+        Person third = new Person("third");
+        Person everyFriend = new Person("everyFriend");
+        Person friend = new Person("Friend");
 
-        System.out.println("Wert von a.name="+a.name);
-        System.out.println("Wert von a.name="+a.getName());
-        System.out.println("Wert von b.name="+b.name);
+        me.addFriend(everyFriend);
+        other.addFriend(everyFriend);
+        third.addFriend(everyFriend);
+        me.addFriend(other);
+        everyFriend.addFriend(friend);
+
+        group.add(me);
+        group.add(third);
+
+        List<String> all = group.stream().limit(15)
+                .map(member -> member.getFriends())
+                .flatMap(friends -> friends.stream())
+                .map(Person::getName)
+                .sorted(String::compareTo)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+
+        System.out.println(all.toString());
+        System.out.println(all.getClass().toString());
+        System.out.println("all = " + all);//*/
+
+        //System.out.println( (new int[] {1}).length );
+
+        /*Pattern p = Pattern.compile(".*\n(\r)?(?<PLZ>[A-Z]{1,2}-[0-9]{4,5}) [A-z]+");
+        Matcher m = p.matcher("12 Rue du Temple,\nF-51100 Reims");
+        System.out.println(m.find());
+        System.out.println(m.group("PLZ"));//Postleitzahl//*/
+
+        /*Pattern p = Pattern.compile("[A-z]+(?<R>[0-9]+)");
+        Matcher m = p.matcher("abcd123");
+        if(m.find())
+            System.out.println( m.group("R"));//*/
+
+        //IntStream.generate((new Random())::nextInt).limit(10).sorted().forEach(System.out::println);
+
+        /*System.out.println(Math.abs(1/3.0));
+        System.out.println(1/3.0);
+        double a=0.3, b=0.1+0.1+0.1;
+        System.out.println(a==b);
+        System.out.println(Math.abs(a-b)<1E-6);//*/
+
+        Collection<String> s = new HashSet<>();
+        //Collection<String> s = new ArrayList<>();
+        s.add("test");
+        s.contains("test");
+        s.remove("test");
+        //s.addAll(Collection<> c);
+        s.size();
+        s.toArray();
+
     }
 }
 
-class Base{
-    protected String name = "Base";
+class Person{
 
-    public String getName(){
+    private final String name;
+
+    private final Set<Person> friends;
+
+    public Person(String name){
+        this.name = name;
+        this.friends = new HashSet<>();
+    }
+
+    public Set<Person> getFriends() {
+        return friends;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public void copyTo(Base other){
-        other.name = name;
-    }
-}
-
-
-class Sub extends Base{
-    protected String name = "Sub";
-
-    public String getName(){
-        return name;
-    }
-
-    public void copyTo(Base other){
-        other.name = name;
-    }
-
-    public void coptyTo(Sub other){
-        other.name = name;
+    public void addFriend(Person p){
+        friends.add(p);
     }
 }
